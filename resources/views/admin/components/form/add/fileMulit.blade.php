@@ -1,9 +1,5 @@
-<div class="custom-file-container" data-upload-id="mySecondImage">
-    <label>Upload (Allow Multiple) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
-    <label class="custom-file-container__custom-file" >
-        <input type="file" name="{{$name}}" class="custom-file-container__custom-file__custom-file-input" multiple>
-        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
-        <span class="custom-file-container__custom-file__custom-file-control"></span>
-    </label>
-    <div class="custom-file-container__image-preview"></div>
+<div class="col-md-12">
+    <label for="formFileMultiple" class="form-label"> File Upload</label>
+    <input class="form-control" name="{{$name}}" type="file" id="formFileMultiple" accept="image/*" multiple required>
+    <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 </div>

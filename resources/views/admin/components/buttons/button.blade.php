@@ -4,3 +4,7 @@
         </i>
     </button>
 </a>
+
+
+<button type="button" class="btn light-danger-bg text-end" data-bs-toggle="modal" data-bs-target="#dremovetask">Remove</button>
+

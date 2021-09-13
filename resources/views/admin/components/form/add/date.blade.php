@@ -1,12 +1,4 @@
-
-        <div class="form-group">
-            <label for="exampleInputuname">{{$label}}</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="{{$icon}}"></i></span>
-                </div>
-                <input required name="{{$name}}" type="date" value="{{request()->filter ? request()->filter : ''}}"
-                       class="form-control" placeholder="{{$placeholder}}">
-            </div>
-        </div>
-
+<div class="col-md-12">
+            <label for="admitdate" class="form-label">{{$label}}</label>
+            <input type="date" name="{{$name}}" class="form-control" placeholder="{{$placeholder}}" id="admitdate" value="{{request()->filter ? request()->filter : ''}}" required>
+</div>

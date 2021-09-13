@@ -1,6 +1,4 @@
-<a href="{{url("admin/$href")}}"
-data-toggle="tooltip"
-title="{{trans('web.edit')}}">
-<i class="fas fa-edit" aria-hidden="true"></i>
-</a>
 
+<a href="{{url("admin/$href")}}" type="button" data-toggle="tooltip" class="btn btn-outline-secondary" title="{{trans('web.edit')}}">
+    <i class="icofont-edit text-success"></i>
+</a>

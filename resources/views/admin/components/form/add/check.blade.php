@@ -1,11 +1,6 @@
-  <div class="form-group row">
-    <div class="col-sm-12">
-        <div class="form-check pl-0">
-            <div class="custom-control custom-checkbox checkbox-info">
-                <input id="{{$id}}" name="{{$name}}" value="{{$value}}" type="checkbox" class="custom-control-input" checked>
-                <label class="custom-control-label" for="{{$id}}"> {{$label}}</label>
-            </div>
-
-        </div>
+<div class="col-md-12">
+    <div class="form-group">
+        <label class="form-label" for="{{$id}}">{{$label}}</label>
+        <input type="checkbox" id="{{$id}}" name="{{$name}}" value="{{$value}}"  checked data-parsley-errors-container="#error-checkbox">
     </div>
 </div>
