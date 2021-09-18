@@ -1,16 +1,12 @@
 @extends('admin.layout.index')
 @section('content')
-<div id="flStackForm" class="col-lg-12 layout-spacing layout-top-spacing">
-    <div class="statbox widget box box-shadow">
-        <div class="widget-header">
-            <div class="row">
-                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                    <h4 class="">@yield('statistics')</h4>
-                </div>
-            </div>
+<div class="card mb-3">
+        <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom-0">
+            <h6 class="mb-0 fw-bold ">@yield('statistics')</h6>
         </div>
-        <div class="widget-content widget-content-area">
-            <table class="table table-hover" style="width:100%" id="areas-table">
+        <div class="card-body basic-custome-color">
+            <div class="table-responsive">
+                <table class="table">
                 <thead>
                     @yield('thead')
                 </thead>
@@ -20,11 +16,9 @@
             </table>
             <span>{{ $items->links('pagination::bootstrap-4') }}</span>
         </div>
-    </div>
+</div>
 </div>
 @endsection
-
-
 
 
 

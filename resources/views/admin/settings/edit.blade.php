@@ -1,0 +1,18 @@
+@extends('admin.layout.forms.edit.index')
+@section('action' , "settings/$item->id")
+@section('title' , trans('language.edit'))
+@section('page-title',trans('language.edit'))
+@section('form-groups')
+    @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => trans('language.mobile'),'name'=>'phone', 'placeholder'=>trans('language.mobile')])
+    @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => "instgram",'name'=>'instgram', 'placeholder'=>"instgram"])
+    @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => "Facebook",'name'=>'facebook', 'placeholder'=>"Facebook"])
+    @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => "linkedin",'name'=>'linkedin', 'placeholder'=>"linkedin"])
+    @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => "youtube",'name'=>'youtube', 'placeholder'=>"youtube"])
+    @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => "Adress",'name'=>'address', 'placeholder'=>"address"])
+    @includeIf('admin.components.form.edit.file', ['icon' => 'fa fa-check','label' => trans('language.image'),'name'=>'logo', 'max'=>'2'])
+    @includeIf('admin.components.form.edit.file', ['icon' => 'fa fa-check','label' => trans('language.banner'),'name'=>'banner', 'max'=>'2'])
+    @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => "Description_ar",'name'=>'des_ar', 'placeholder'=>"Description_ar"])
+    @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => "Description_en",'name'=>'des_en', 'placeholder'=>"Description_en"])
+@endsection
+@section('submit-button-title' ,trans('language.edit'))
+

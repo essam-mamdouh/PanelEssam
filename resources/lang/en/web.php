@@ -82,7 +82,7 @@ return [
     'listAllFormulas' => 'List All Formulas',
     'add-formula' => 'Add New Formula',
     'description' => 'Description',
-    'product' => 'Product',
+    'products' => 'Products',
     'ittos' => 'Ittos',
     'blogs' => 'Blogs',
     'countries'=>'Countries',
@@ -91,4 +91,8 @@ return [
     'branches' => 'branches',
     'careers' => 'careers',
     'faq'=>'faq',
+    'about'=>'About',
+    'sliders'=>'Sliders',
+    'contact'=>'Contact_Us',
+    'settings'=>'Setting',
 ];

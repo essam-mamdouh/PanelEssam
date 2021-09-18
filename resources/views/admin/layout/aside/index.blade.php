@@ -8,7 +8,7 @@
                     <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
                 </svg>
             </span>
-            <span class="logo-text">AdminPanel</span>
+            <span class="logo-text">Panel</span>
         </a>
         <!-- Menu: main ul -->
 
@@ -22,6 +22,85 @@
                     </li>
                     <li>
                         @includeIf("admin.layout.aside.sub-item" ,["href" => "categories/create" , "title" => trans('web.add') , "tooltip" => trans('web.add-user'), "class" => "mdi mdi-plus"])
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="collapsed">
+                @includeIf("admin.layout.aside.main-item" ,["href" => "products " , "title" => trans('web.products')])
+                <!-- Menu: Sub menu ul -->
+                <ul class="sub-menu collapse" id="products"  data-parent="#accordionExample">
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "products" , "title" => trans('web.list') , "tooltip" => trans('web.list') , "class" => "mdi mdi-view-list"])
+                    </li>
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "products/create" , "title" => trans('web.add') , "tooltip" => trans('web.add-user'), "class" => "mdi mdi-plus"])
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="collapsed">
+                @includeIf("admin.layout.aside.main-item" ,["href" => "about " , "title" => trans('web.about')])
+                <!-- Menu: Sub menu ul -->
+                <ul class="sub-menu collapse" id="about"  data-parent="#accordionExample">
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "about" , "title" => trans('web.list') , "tooltip" => trans('web.list') , "class" => "mdi mdi-view-list"])
+                    </li>
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "about/create" , "title" => trans('web.add') , "tooltip" => trans('web.add-user'), "class" => "mdi mdi-plus"])
+                    </li>
+                </ul>
+            </li>
+
+
+
+            <li class="collapsed">
+                @includeIf("admin.layout.aside.main-item" ,["href" => "blogs " , "title" => trans('web.blogs')])
+                <!-- Menu: Sub menu ul -->
+                <ul class="sub-menu collapse" id="blogs"  data-parent="#accordionExample">
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "blogs" , "title" => trans('web.list') , "tooltip" => trans('web.list') , "class" => "mdi mdi-view-list"])
+                    </li>
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "blogs/create" , "title" => trans('web.add') , "tooltip" => trans('web.add-user'), "class" => "mdi mdi-plus"])
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="collapsed">
+                @includeIf("admin.layout.aside.main-item" ,["href" => "sliders " , "title" => trans('web.sliders')])
+                <!-- Menu: Sub menu ul -->
+                <ul class="sub-menu collapse" id="sliders"  data-parent="#accordionExample">
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "sliders" , "title" => trans('web.list') , "tooltip" => trans('web.list') , "class" => "mdi mdi-view-list"])
+                    </li>
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "sliders/create" , "title" => trans('web.add') , "tooltip" => trans('web.add-user'), "class" => "mdi mdi-plus"])
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="collapsed">
+                @includeIf("admin.layout.aside.main-item" ,["href" => "contact " , "title" => trans('web.contact')])
+                <!-- Menu: Sub menu ul -->
+                <ul class="sub-menu collapse" id="contact"  data-parent="#accordionExample">
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "contact" , "title" => trans('web.list') , "tooltip" => trans('web.list') , "class" => "mdi mdi-view-list"])
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="collapsed">
+                @includeIf("admin.layout.aside.main-item" ,["href" => "settings " , "title" => trans('web.settings')])
+                <!-- Menu: Sub menu ul -->
+                <ul class="sub-menu collapse" id="settings"  data-parent="#accordionExample">
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "settings" , "title" => trans('web.list') , "tooltip" => trans('web.list') , "class" => "mdi mdi-view-list"])
                     </li>
                 </ul>
             </li>

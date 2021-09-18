@@ -479,4 +479,10 @@ return [
     'job_title_en' => 'Job title in English',
     'teams' => 'Teams',
     'contact-us' => 'Contact Us',
+    'des_en'=>'description_en',
+    'des_ar'=>'description_ar',
+    'blogs'=>'blogs',
+    'sliders'=>'sliders',
+    'contact'=>'Contact',
+    'messages'=>'Message',
 ];
