@@ -12,7 +12,16 @@ class Blog extends Model
         'image',
         'name_ar',
         'name_en',
-        'dse_ar',
+        'des_ar',
         'des_en',
     ];
+
+    public function getNameAttribute()
+    {
+        return $this['name_'.App()->getLocale()];
+    }
+
+    public function getDesAttribute(){
+        return $this['des_'.App()->getLocale()];
+    }
 }

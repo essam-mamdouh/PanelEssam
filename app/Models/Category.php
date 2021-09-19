@@ -16,6 +16,10 @@ class Category extends Model
         'name_en',
     ];
 
+    public function getNameAttribute()
+    {
+        return $this['name_'.App()->getLocale()];
+    }
 
 
 }

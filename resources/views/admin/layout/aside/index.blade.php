@@ -28,14 +28,14 @@
 
 
             <li class="collapsed">
-                @includeIf("admin.layout.aside.main-item" ,["href" => "products " , "title" => trans('web.products')])
+                @includeIf("admin.layout.aside.main-item" ,["href" => "product " , "title" => trans('web.products')])
                 <!-- Menu: Sub menu ul -->
-                <ul class="sub-menu collapse" id="products"  data-parent="#accordionExample">
+                <ul class="sub-menu collapse" id="product"  data-parent="#accordionExample">
                     <li>
-                        @includeIf("admin.layout.aside.sub-item" ,["href" => "products" , "title" => trans('web.list') , "tooltip" => trans('web.list') , "class" => "mdi mdi-view-list"])
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "product" , "title" => trans('web.list') , "tooltip" => trans('web.list') , "class" => "mdi mdi-view-list"])
                     </li>
                     <li>
-                        @includeIf("admin.layout.aside.sub-item" ,["href" => "products/create" , "title" => trans('web.add') , "tooltip" => trans('web.add-user'), "class" => "mdi mdi-plus"])
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "product/create" , "title" => trans('web.add') , "tooltip" => trans('web.add-user'), "class" => "mdi mdi-plus"])
                     </li>
                 </ul>
             </li>

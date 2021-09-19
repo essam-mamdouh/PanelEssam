@@ -20,4 +20,8 @@ class Setting extends Model
         'des_en',
         'address',
     ];
+
+    public function getDesAttribute(){
+        return $this['des_'.App()->getLocale()];
+    }
 }

@@ -50,6 +50,6 @@ class IndexController extends Controller
 
         $item->update($data);
 
-        return redirect(route('settings.update'))->with('success','Settings updated successfully');
+        return redirect()->back();
     }
 }
