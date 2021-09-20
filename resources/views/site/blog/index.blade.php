@@ -1,6 +1,7 @@
 @extends('.site.layout.container')
 @section('content')
-<div class="breadcrumb-area section" style="background-image: url({{ $setting->banner }})">
+<div class="breadcrumb-area section" style="background-image: url({{ $setting->banner }});background-size: cover;
+    background-position: center center;">
     <div class="container">
         <div class="breadcrumb pt-75 pb-75 pt-sm-70 pb-sm-40 pt-xs-70 pb-xs-40">
             <div class="row">
@@ -32,7 +33,7 @@
                     <div class="latest-blog-contents">
                         <h4><a href="#">{{ $blog->name }}</a></h4>
                         <p>{{ $blog->des }}</p>
-                        <a class="read-more" href="#">{{ trans('language.details') }}</a>
+                        <a class="read-more" href="{{url('/blog/'.$blog->id)}}">{{ trans('language.details') }}</a>
                     </div>
                 </div><!-- Single latest blog End -->
             </div>

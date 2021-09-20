@@ -10,11 +10,9 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    public function index($id){
-
-        $items = Category::find($id);
-        $products = Product::where('category_id',$items->id)->orderby('id','asc')->paginate(9);
-        $setting = Setting::get();
-        return view('site.product.index',compact('items','products','setting'));
+    public function show($id){
+        $product = Product::findOrFail($id);
+        $setting = Setting::first();
+        return view('site.product.show',compact('product','setting'));
     }
 }

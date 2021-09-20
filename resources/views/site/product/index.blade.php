@@ -1,16 +1,17 @@
 @extends('.site.layout.container')
 @section('content')
 <!-- Breadcrumb -->
-<div class="breadcrumb-area section" style="background-image: url(assets/images/bg/breadcrumb.jpg)">
+<div class="breadcrumb-area section" style="background-image: url({{ asset($setting->banner) }});background-size: cover;
+    background-position: center center;">
     <div class="container">
         <div class="breadcrumb pt-75 pb-75 pt-sm-70 pb-sm-40 pt-xs-70 pb-xs-40">
             <div class="row">
                 <div class="col">
-                    <h2>{{ trans('language.product') }}</h2>
+                    <h2>{{ $category->name }}</h2>
                     <!-- breadcrumb-list start -->
                     <ul class="breadcrumb-list">
                         <li class="breadcrumb-item"><a href="{{ url('/') }}">{{ trans('language.home') }}</a></li>
-                        <li class="breadcrumb-item active">{{ trans('language.product') }}</li>
+                        <li class="breadcrumb-item active">{{ $category->name }}</li>
                     </ul>
                     <!-- breadcrumb-list end -->
                 </div>
@@ -26,23 +27,26 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="all">
                     <div class="row">
+                        @foreach ($products as $product )
                         <div class="col-lg-3 col-md-4 col-12">
                             <!-- single-property Start -->
                             <div class="single-property mt-30">
                                 <div class="property-img">
-                                    <a href="#">
-                                        <img src="assets/images/propertes/01.jpg" alt="">
+                                    <a href="{{ url('/product/'.$product->id) }}">
+                                        <img src="{{ asset($product->image) }}" alt="">
                                     </a>
                                 </div>
                                 <div class="property-desc">
-                                    <h4><a href="#">Mariyasa de Casel </a></h4>
+                                    <h4><a href="{{ url('/product/'.$product->id) }}">{{ $product->name }}</a></h4>
                                     <p>
-                                        <span class="location">22 First street, Chicago, USA</span>
+                                        <span class="location">{{ $product->des }}</span>
                                     </p>
 
                                 </div>
                             </div><!-- single-property End -->
                         </div>
+                        @endforeach
+
 
                     </div>
                 </div>
@@ -53,11 +57,7 @@
             <div class="row pt-40">
                 <div class="col">
                     <ul class="page-pagination">
-                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                        <li class="active"><a href="#">01</a></li>
-                        <li><a href="#">02</a></li>
-                        <li><a href="#">03</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                        <li> {!! $products->links() !!}</li>
                     </ul>
                 </div>
             </div>

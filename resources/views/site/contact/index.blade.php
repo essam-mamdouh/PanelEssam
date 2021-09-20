@@ -1,7 +1,8 @@
 @extends('.site.layout.container')
 @section('content')
 <!-- Breadcrumb -->
-<div class="breadcrumb-area section" style="background-image: url({{ $setting->banner }})">
+<div class="breadcrumb-area section" style="background-image: url({{ $setting->banner }});background-size: cover;
+    background-position: center center;">
     <div class="container">
         <div class="breadcrumb pt-75 pb-75 pt-sm-70 pb-sm-40 pt-xs-70 pb-xs-40">
             <div class="row">

@@ -15,4 +15,10 @@ class IndexController extends Controller
         $setting = Setting::first();
         return view('site.blog.index',compact('blogs','setting'));
     }
+
+    public function show($id) {
+        $blog = Blog::find($id);
+        $setting = Setting::first();
+        return view('site.blog.show',compact('blog','setting'));
+    }
 }

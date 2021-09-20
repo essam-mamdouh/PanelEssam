@@ -111,7 +111,7 @@
                     <div class="latest-blog-contents">
                         <h4><a href="#"></a>{{ $blog->name }}</h4>
                         <p>{{ $blog->des }}</p>
-                        <a class="read-more" href="#">{{ trans('language.details') }}</a>
+                        <a class="read-more" href="{{url('/blog/'.$blog->id)}}">{{ trans('language.details') }}</a>
                     </div>
                 </div><!-- Single latest blog End -->
             </div>

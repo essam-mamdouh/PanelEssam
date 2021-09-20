@@ -15,4 +15,12 @@ class IndexController extends Controller
         $setting = Setting::first();
         return view('site.category.index',compact('categories','setting'));
     }
+
+    public function show($id){
+
+        $category = Category::find($id);
+        $products = $category->products()->paginate(9);
+        $setting = Setting::first();
+        return view('site.product.index',compact('category','products','setting'));
+    }
 }

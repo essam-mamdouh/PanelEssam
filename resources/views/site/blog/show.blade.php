@@ -1,0 +1,58 @@
+@extends('.site.layout.container')
+@section('content')
+<div class="breadcrumb-area section" style="background-image: url({{ asset($setting->banner) }});background-size: cover;
+    background-position: center center;">
+    <div class="container">
+        <div class="breadcrumb pt-75 pb-75 pt-sm-70 pb-sm-40 pt-xs-70 pb-xs-40">
+            <div class="row">
+                <div class="col">
+                    <h2>{{ $blog->name }}</h2>
+                    <!-- breadcrumb-list start -->
+                    <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="{{ url('/') }}">{{ trans('language.home') }}</a></li>
+                        <li class="breadcrumb-item active">{{ $blog->name }}</li>
+                    </ul>
+                    <!-- breadcrumb-list end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Page Conttent -->
+<main class="page-content section">
+    <!-- Blog Grids Area -->
+    <div class="blog-grids-area pt-80 pt-md-60 pt-sm-40 pt-xs-30 pb-110 pb-md-90 pb-sm-70 pb-xs-60">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-8 order-lg-1 order-1">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="blog-details-warpper">
+                                <div class="details-image mt-30">
+                                    <img src="{{ asset($blog->image) }}" alt="">
+                                </div>
+                                <div class="details-contents-wrap">
+                                    <h3>{{ $blog->name }}</h3>
+
+                                    <p>{{ $blog->des }}</p>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// Blog Grids Area -->
+</main>
+<!--// Page Conttent -->
+@stop
+@section('extra_js')
+@stop
