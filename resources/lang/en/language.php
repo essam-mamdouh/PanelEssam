@@ -485,4 +485,10 @@ return [
     'sliders'=>'sliders',
     'contact'=>'Contact',
     'messages'=>'Message',
+    'home'=>'Home',
+    'project'=>'Project',
+    'blog'=>'Blog',
+    'getIn'=>'Get In',
+    'touch'=>'Touch',
+
 ];
