@@ -23,10 +23,8 @@ class IndexController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name_ar' => 'required',
             'name_en' => 'required',
             'image' => 'nullable|image|mimes:jpeg,jpg,bmp,png',
-            'des_ar'=>'required',
             'des_en'=>'required',
         ]);
         $data['image'] = $this->uploadImage($request->file('image'), 'sliders/');
@@ -51,10 +49,8 @@ class IndexController extends Controller
     {
 
         $data = $request->validate([
-            'name_ar' => 'required',
             'name_en' => 'required',
             'image' => 'nullable|image|mimes:jpeg,jpg,bmp,png',
-            'des_ar'=>'required',
             'des_en'=>'required',
         ]);
 

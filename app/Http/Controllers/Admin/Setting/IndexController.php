@@ -28,7 +28,6 @@ class IndexController extends Controller
             'instgram'        => 'required',
             'linkedin'        => 'required',
             'youtube'         => 'required',
-            'des_ar'          => 'required',
             'des_en'          => 'required',
             'address'         => 'required',
            ]);

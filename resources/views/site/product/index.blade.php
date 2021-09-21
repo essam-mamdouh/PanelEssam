@@ -7,11 +7,11 @@
         <div class="breadcrumb pt-75 pb-75 pt-sm-70 pb-sm-40 pt-xs-70 pb-xs-40">
             <div class="row">
                 <div class="col">
-                    <h2>{{ $category->name }}</h2>
+                    <h2>{{ $subCategories->name }}</h2>
                     <!-- breadcrumb-list start -->
                     <ul class="breadcrumb-list">
                         <li class="breadcrumb-item"><a href="{{ url('/') }}">{{ trans('language.home') }}</a></li>
-                        <li class="breadcrumb-item active">{{ $category->name }}</li>
+                        <li class="breadcrumb-item active">{{ $subCategories->name }}</li>
                     </ul>
                     <!-- breadcrumb-list end -->
                 </div>
@@ -39,7 +39,7 @@
                                 <div class="property-desc">
                                     <h4><a href="{{ url('/product/'.$product->id) }}">{{ $product->name }}</a></h4>
                                     <p>
-                                        <span class="location">{{ $product->des }}</span>
+                                     {{ Str::limit($product->des, 150, '...') }}
                                     </p>
 
                                 </div>

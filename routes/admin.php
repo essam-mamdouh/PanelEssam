@@ -8,6 +8,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::get('/dash',[Dashboard\DashboardController::class,'index'])->name('dash');
 Route::resource('/categories', Categories\IndexController::class);
+Route::resource('/subCategory', SubCategory\IndexController::class);
 Route::resource('/product', Product\IndexController::class);
 Route::resource('/about', About\IndexController::class);
 Route::resource('/contact', Contact\IndexController::class);

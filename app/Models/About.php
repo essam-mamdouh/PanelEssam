@@ -11,9 +11,7 @@ class About extends Model
 
     protected $fillable = [
         'image',
-        'name_ar',
         'name_en',
-        'des_ar',
         'des_en',
     ];
 

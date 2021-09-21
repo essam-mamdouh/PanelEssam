@@ -490,5 +490,7 @@ return [
     'blog'=>'Blog',
     'getIn'=>'Get In',
     'touch'=>'Touch',
+    'subcategory'=>'SubCategory',
+    'product'=>'product',
 
 ];

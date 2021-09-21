@@ -15,7 +15,7 @@ $about = \App\Models\About::first();
                             <h3>{{ trans('language.about') }}</h3>
                         </div>
                         <div class="footer-info">
-                            <p>{{ $about->des}}</p>
+                            <p>{{ Str::limit($about->des, 150, '...')}}</p>
                             <!-- mailchimp-alerts Start -->
                             <div class="mailchimp-alerts text-centre">
                                 <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
@@ -45,7 +45,7 @@ $about = \App\Models\About::first();
                     <!-- Footer-widget Start -->
                     <div class="footer-widget">
                         <div class="footer-title">
-                            <h3>Contact Us</h3>
+                            <h3>{{ trans('language.contact') }}</h3>
                         </div>
                         <div class="footer-info">
                             <ul class="footer-list">

@@ -2,12 +2,12 @@
 @section('content')
 <!-- Breadcrumb -->
 <div class="breadcrumb-area section" style="background-image: url({{ $setting->banner }});background-size: cover;
-    background-position: center center;">
+    background-position: center center; opacity: 23;">
     <div class="container">
         <div class="breadcrumb pt-75 pb-75 pt-sm-70 pb-sm-40 pt-xs-70 pb-xs-40">
             <div class="row">
                 <div class="col">
-                    <h2>About us</h2>
+                    <h2>{{ trans('language.about') }}</h2>
                     <!-- breadcrumb-list start -->
                     <ul class="breadcrumb-list">
                         <li class="breadcrumb-item"><a href="{{ url('/') }}">{{ trans('language.home') }}</a></li>

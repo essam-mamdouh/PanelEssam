@@ -6,10 +6,8 @@
 @section('thead')
 <tr>
     <th>#</th>
-    <th>{{trans('language.name_ar')}}</th>
     <th>{{trans('language.name_en')}}</th>
     <th>{{trans('language.image')}}</th>
-    <th>{{trans('language.description_ar')}}</th>
     <th>{{trans('language.description_en')}}</th>
     <th>{{trans('language.register_at')}}</th>
     <th>{{trans('language.settings')}}</th>
@@ -19,10 +17,8 @@
     @foreach($items as $item)
         <tr>
             <td>{{ $loop->iteration }}</td>
-            <td>{{$item->name_ar}}</td>
             <td>{{$item->name_en}}</td>
             <td><img class="avatar xl rounded-circle img-thumbnail shadow-sm" src="{{ url($item->image)}}"/></td>
-            <td>{{$item->des_ar}}</td>
             <td>{{$item->des_en}}</td>
             <td>{{$item->created_at}}</td>
             <td>

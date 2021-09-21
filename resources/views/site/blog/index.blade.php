@@ -32,7 +32,7 @@
                     </div>
                     <div class="latest-blog-contents">
                         <h4><a href="#">{{ $blog->name }}</a></h4>
-                        <p>{{ $blog->des }}</p>
+                        <p>{{ Str::limit($blog->des, 150, '...')}}</p>
                         <a class="read-more" href="{{url('/blog/'.$blog->id)}}">{{ trans('language.details') }}</a>
                     </div>
                 </div><!-- Single latest blog End -->

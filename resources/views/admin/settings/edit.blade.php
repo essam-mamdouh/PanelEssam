@@ -11,7 +11,6 @@
     @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => "Adress",'name'=>'address', 'placeholder'=>"address"])
     @includeIf('admin.components.form.edit.file', ['icon' => 'fa fa-check','label' => trans('language.image'),'name'=>'logo', 'max'=>'2'])
     @includeIf('admin.components.form.edit.file', ['icon' => 'fa fa-check','label' => trans('language.banner'),'name'=>'banner', 'max'=>'2'])
-    @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => "Description_ar",'name'=>'des_ar', 'placeholder'=>"Description_ar"])
     @includeIf('admin.components.form.edit.text', ['icon' => 'fa fa-user','label' => "Description_en",'name'=>'des_en', 'placeholder'=>"Description_en"])
 @endsection
 @section('submit-button-title' ,trans('language.edit'))

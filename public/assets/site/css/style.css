@@ -4359,7 +4359,7 @@ img.mfp-img {
   text-align: center;
 }
 .breadcrumb h2 {
-  color: #ffffff;
+  color: #000000;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -4367,7 +4367,7 @@ img.mfp-img {
   display: inline-flex;
   padding: 0 8px;
   position: relative;
-  color: #ffffff;
+  color: #000000;
 }
 .breadcrumb ul li.breadcrumb-item::before {
   position: absolute;
@@ -4387,7 +4387,7 @@ img.mfp-img {
   display: block;
   font-size: 15px;
   line-height: 18px;
-  color: #f1f1f1;
+  color: #000000;
 }
 .breadcrumb ul li.breadcrumb-item a:hover {
   color: #151515;

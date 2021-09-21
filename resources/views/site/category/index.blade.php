@@ -31,13 +31,17 @@
                             <!-- single-property Start -->
                             <div class="single-property mt-30">
                                 <div class="property-img">
-                                    <a href="#">
+
                                         <img src="{{ $category->image }}" alt="">
-                                    </a>
+
                                 </div>
                                 <div class="property-desc" style="padding: 0 0 0 0;!importrant">
-                                    <h4><a href="{{url('/project/'.$category->id)}}">{{ $category->name }}</a></h4>
-
+                                    <h4>{{ $category->name }}</h4>
+                                    @foreach ($subCategories as $subCategoriey )
+                                    <p>
+                                        <a href="{{url('/project/'.$subCategoriey->id)}}" class="location">{{ $subCategoriey->name }}</a>
+                                    </p>
+                                    @endforeach
                                 </div>
                             </div><!-- single-property End -->
                         </div>
@@ -51,7 +55,6 @@
     </div><!-- Featured Properites End -->
 
 </main>
-
 @stop
 @section('extra_js')
 @stop

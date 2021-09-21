@@ -8,7 +8,7 @@ $setting = \App\Models\Setting::first();
 
                 <div class="col-lg-2 col-6">
                     <div class="header-logo">
-                        <a href="{{ url('/') }}"><img src="assets/images/logo.png" alt=""></a>
+                        <a href="{{ url('/') }}"><img src="{{ $setting->logo }}" alt=""></a>
                     </div>
                 </div>
 
@@ -21,16 +21,7 @@ $setting = \App\Models\Setting::first();
                                 <li><a href="{{ url('project') }}">{{trans('language.project')}}</a></li>
                                 <li><a href="{{ url('blog') }}">{{trans('language.blog')}}</a></li>
                                 <li><a href="{{ url('contact') }}">{{trans('language.contact')}}</a></li>
-                                <li class="{{app()->getLocale() == 'en' ? 'right' : 'left'}}">
 
-                                    @if(app()->getLocale() == 'en')
-                                            <a href="{{ url("".url()->full()."?&lang=ar") }}">{{trans('web.arabic')}}</a>
-                                        @else
-                                            <a href="{{ url("".url()->full()."?&lang=en") }}">{{trans('web.english')}}</a>
-                                        @endif
-
-
-                         </li>
                             </ul>
                         </nav>
                         <div id="search-overlay-trigger" class="search-icon">

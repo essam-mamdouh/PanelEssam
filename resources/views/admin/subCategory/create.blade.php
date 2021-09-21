@@ -1,9 +1,9 @@
 @extends('admin.layout.forms.add.index')
-@section('action' , "categories")
+@section('action' , "subCategory")
 @section('title' , trans('language.add'))
-@section('page-title',trans('web.categories'))
+@section('page-title',trans('web.subCategory'))
 @section('form-groups')
     @includeIf('admin.components.form.add.text', ['icon' => 'fa fa-user','label' => trans('language.name_en'),'name'=>'name_en', 'placeholder'=>trans('language.name_en')])
-    @includeIf('admin.components.form.add.file', ['icon' => 'fa fa-check','label' => trans('language.image'),'name'=>'image', 'max'=>'5'])
+    @includeIf('admin.components.form.add.select', ['label' => trans("language.category"),'name'=>'category_id', 'items'=> \App\Models\Category::all()])
     @endsection
 @section('submit-button-title', trans('web.add'))

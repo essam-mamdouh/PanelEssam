@@ -26,6 +26,20 @@
                 </ul>
             </li>
 
+            <li class="collapsed">
+                @includeIf("admin.layout.aside.main-item" ,["href" => "subCategory " , "title" => trans('web.subCategory')])
+                <!-- Menu: Sub menu ul -->
+                <ul class="sub-menu collapse" id="subCategory"  data-parent="#accordionExample">
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "subCategory" , "title" => trans('web.list') , "tooltip" => trans('web.list') , "class" => "mdi mdi-view-list"])
+                    </li>
+                    <li>
+                        @includeIf("admin.layout.aside.sub-item" ,["href" => "subCategory/create" , "title" => trans('web.add') , "tooltip" => trans('web.add-user'), "class" => "mdi mdi-plus"])
+                    </li>
+                </ul>
+            </li>
+
+
 
             <li class="collapsed">
                 @includeIf("admin.layout.aside.main-item" ,["href" => "product " , "title" => trans('web.products')])

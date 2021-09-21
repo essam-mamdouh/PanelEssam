@@ -65,7 +65,7 @@
 
         <div class="row">
             @foreach ($products as $product )
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12">
                 <!-- single-property Start -->
                 <div class="single-property mt-30">
                     <div class="property-img">
@@ -76,7 +76,7 @@
                     <div class="property-desc">
                         <h4><a href="#">{{ $product->name }}</a></h4>
                         <p>
-                            <span class="property-info">{{ $product->des }}</span>
+                            {{ Str::limit($product->des, 100, '...') }}
                         </p>
                     </div>
                 </div><!-- single-property End -->
@@ -110,7 +110,7 @@
                     </div>
                     <div class="latest-blog-contents">
                         <h4><a href="#"></a>{{ $blog->name }}</h4>
-                        <p>{{ $blog->des }}</p>
+                        <p> {{ Str::limit($blog->des, 100, '...') }}</p>
                         <a class="read-more" href="{{url('/blog/'.$blog->id)}}">{{ trans('language.details') }}</a>
                     </div>
                 </div><!-- Single latest blog End -->

@@ -4,16 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Category extends Model
+class Sub_Category extends Model
 {
     use HasFactory;
-
-
     protected $fillable = [
-        'image',
         'name_en',
+        'category_id'
     ];
 
     public function getNameAttribute()
@@ -21,9 +18,13 @@ class Category extends Model
         return $this['name_'.App()->getLocale()];
     }
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
     public function products(){
         return $this->hasMany(Product::class);
     }
-
 
 }

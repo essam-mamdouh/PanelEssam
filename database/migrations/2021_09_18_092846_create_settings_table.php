@@ -23,8 +23,8 @@ class CreateSettingsTable extends Migration
             $table->string('instgram')->nullable();
             $table->string('linkedin')->nullable();
             $table->string('youtube')->nullable();
-            $table->text('des_ar')->nullable();
             $table->text('des_en')->nullable();
+            $table->string('email')->nullable();
             $table->timestamps();
         });
     }

@@ -23,7 +23,6 @@ class IndexController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name_ar' => 'required',
             'name_en' => 'required',
             'image' => 'nullable|image|mimes:jpeg,jpg,bmp,png',
         ]);
@@ -49,7 +48,6 @@ class IndexController extends Controller
     {
 
         $data = $request->validate([
-            'name_ar' => 'required',
             'name_en' => 'required',
             'image' => 'nullable|image|mimes:jpeg,jpg,bmp,png',
         ]);

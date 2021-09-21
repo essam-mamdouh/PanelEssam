@@ -16,7 +16,6 @@ class Setting extends Model
         'instgram',
         'linkedin',
         'youtube',
-        'des_ar',
         'des_en',
         'address',
     ];

@@ -10,9 +10,7 @@ class Blog extends Model
     use HasFactory;
     protected $fillable = [
         'image',
-        'name_ar',
         'name_en',
-        'des_ar',
         'des_en',
     ];
 

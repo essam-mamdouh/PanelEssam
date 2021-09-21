@@ -4,10 +4,9 @@
 @section('page-title',trans('language.edit'))
 @section('form-groups')
     @includeIf('admin.components.form.edit.text', ['label' => trans('language.name_en'),'name'=>'name_en', 'placeholder'=>trans('language.name_en')])
-    @includeIf('admin.components.form.edit.text', ['label' => trans('language.name_ar'),'name'=>'name_ar', 'placeholder'=>trans('language.name_ar')])
     @includeIf('admin.components.form.edit.file', ['label' => trans('language.image'),'name'=>'image', 'max'=>'5'])
     @includeIf('admin.components.form.edit.textarea', ['label' => trans('language.des_en'),'name'=>'des_en', 'placeholder'=>trans('language.des_en')])
-    @includeIf('admin.components.form.edit.textarea', ['label' => trans('language.des_ar'),'name'=>'des_ar', 'placeholder'=>trans('language.des_ar')])
     @includeIf('admin.components.form.edit.select', ['label' => trans("language.category"),'name'=>'category_id', 'items'=> \App\Category::all()])
+    @includeIf('admin.components.form.edit.select', ['label' => trans("language.subcategory"),'name'=>'sub__category_id', 'items'=> \App\Models\Sub_Category::all()])
     @endsection
 @section('submit-button-title' , trans('language.edit'))
